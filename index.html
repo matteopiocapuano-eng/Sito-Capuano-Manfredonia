@@ -21,11 +21,12 @@ body{font-family:'Montserrat',sans-serif;background:var(--crema);color:var(--t);
 nav{position:fixed;top:0;left:0;right:0;z-index:200;padding:0 48px;height:72px;display:flex;align-items:center;justify-content:space-between;transition:background .5s,box-shadow .5s}
 nav.sc{background:rgba(255,255,255,.98);box-shadow:0 1px 0 rgba(106,172,206,.2);backdrop-filter:blur(16px)}
 /* Logo sempre visibile: sfondo pill celeste su hero, colore naturale dopo scroll */
-.nav-logo-wrap{display:flex;align-items:center;transition:background .5s,padding .5s}
-nav:not(.sc) .nav-logo-wrap{background:rgba(255,255,255,.1);padding:6px 16px;border-radius:2px;backdrop-filter:blur(6px)}
+.nav-logo-wrap{display:flex;align-items:center;transition:background .5s,padding .5s,box-shadow .5s}
+nav:not(.sc) .nav-logo-wrap{background:rgba(255,255,255,.95);padding:8px 20px;border-radius:3px;box-shadow:0 2px 24px rgba(0,0,0,.2)}
+nav.sc .nav-logo-wrap{background:transparent;padding:0;box-shadow:none}
 .nl{height:48px;width:auto;display:block;transition:all .3s;image-rendering:-webkit-optimize-contrast}
 /* su hero: logo in bianco */
-nav:not(.sc) .nl{filter:brightness(0) invert(1) drop-shadow(0 2px 14px rgba(0,0,0,.65))}
+nav:not(.sc) .nl{filter:none}
 /* dopo scroll: logo originale */
 nav.sc .nl{filter:none}
 .nlinks{display:flex;gap:34px;align-items:center}
