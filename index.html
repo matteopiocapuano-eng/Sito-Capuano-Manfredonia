@@ -56,7 +56,7 @@ nav.sc .ham span{background:var(--t)}
 /* ══ HERO ══ */
 .hero{height:100svh;min-height:620px;position:relative;overflow:hidden;display:flex;align-items:flex-end}
 .hero-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 35%}
-.hero-ov{position:absolute;inset:0;background:linear-gradient(180deg,rgba(13,32,56,.6) 0%,rgba(13,32,56,.1) 28%,rgba(13,32,56,.65) 65%,rgba(13,32,56,.97) 100%)}
+.hero-ov{position:absolute;inset:0;background:linear-gradient(180deg,rgba(13,32,56,.6) 0%,rgba(13,32,56,.1) 28%,rgba(13,32,56,.65) 65%,rgba(13,32,56,1) 100%)}
 .hero-body{position:relative;z-index:2;padding:0 48px 88px;width:100%;display:grid;grid-template-columns:1fr auto;gap:40px;align-items:flex-end}
 .hey{font-size:10px;font-weight:700;letter-spacing:5px;color:#fff;text-transform:uppercase;display:flex;align-items:center;gap:14px;margin-bottom:22px;opacity:0;animation:fu .7s .2s forwards;text-shadow:0 1px 8px rgba(0,0,0,.5)}
 .hey::before{content:'';width:34px;height:1px;background:var(--cel-lt);opacity:.7}
@@ -84,7 +84,7 @@ nav.sc .ham span{background:var(--t)}
 .st.wh{color:#fff}.st.wh em{color:var(--cel-lt)}
 
 /* ══ ONDE ══ */
-.wdiv{height:72px;overflow:hidden;position:relative}
+.wdiv{height:72px;overflow:hidden;position:relative;margin-top:-1px}
 .wdiv svg{position:absolute;bottom:0;left:0;width:200%;animation:wslide 14s linear infinite}
 .wdiv svg:nth-child(2){animation-delay:-7s;opacity:.35}
 @keyframes wslide{from{transform:translateX(0)}to{transform:translateX(-50%)}}
