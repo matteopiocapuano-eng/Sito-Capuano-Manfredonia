@@ -20,15 +20,13 @@ body{font-family:'Montserrat',sans-serif;background:var(--crema);color:var(--t);
 /* ══ NAV ══ */
 nav{position:fixed;top:0;left:0;right:0;z-index:200;padding:0 48px;height:72px;display:flex;align-items:center;justify-content:space-between;transition:background .5s,box-shadow .5s}
 nav.sc{background:rgba(255,255,255,.98);box-shadow:0 1px 0 rgba(106,172,206,.2);backdrop-filter:blur(16px)}
-/* Logo sempre visibile: sfondo pill celeste su hero, colore naturale dopo scroll */
-.nav-logo-wrap{display:flex;align-items:center;transition:background .5s,padding .5s,box-shadow .5s}
+.nav-logo-wrap{display:flex;align-items:center}
 nav:not(.sc) .nav-logo-wrap{background:transparent;padding:0;box-shadow:none}
-nav:not(.sc) .nl{filter:drop-shadow(0 2px 12px rgba(0,0,0,.55))}
 nav.sc .nav-logo-wrap{background:transparent;padding:0;box-shadow:none}
-.nl{height:48px;width:auto;display:block;transition:all .3s;image-rendering:-webkit-optimize-contrast}
-/* su hero: logo in bianco */
-nav:not(.sc) .nl{filter:none}
-/* dopo scroll: logo originale */
+.nl{height:48px;width:auto;display:block;transition:filter .3s;image-rendering:-webkit-optimize-contrast}
+/* Su hero: logo reso bianco così testo e icona sono leggibili sulla foto */
+nav:not(.sc) .nl{filter:brightness(0) invert(1) drop-shadow(0 1px 8px rgba(0,0,0,.45))}
+/* Dopo scroll: logo originale */
 nav.sc .nl{filter:none}
 .nlinks{display:flex;gap:34px;align-items:center}
 .nlinks a{font-size:10px;font-weight:600;letter-spacing:3px;text-decoration:none;text-transform:uppercase;transition:color .2s;white-space:nowrap}
@@ -62,7 +60,7 @@ nav.sc .ham span{background:var(--t)}
 @keyframes hw2{0%,100%{d:path("M0,80 C240,40 480,100 720,75 C960,50 1200,90 1440,75 L1440,120 L0,120 Z")}50%{d:path("M0,85 C220,50 460,105 720,78 C980,52 1220,88 1440,72 L1440,120 L0,120 Z")}}
 @keyframes hw3{0%,100%{d:path("M0,95 C360,70 720,110 1080,88 C1260,77 1380,100 1440,95 L1440,120 L0,120 Z")}50%{d:path("M0,90 C340,68 700,108 1060,86 C1240,75 1370,98 1440,90 L1440,120 L0,120 Z")}}
 .hero-body{position:relative;z-index:2;padding:0 48px 88px;width:100%;display:grid;grid-template-columns:1fr auto;gap:40px;align-items:flex-end}
-.hey{font-size:9px;font-weight:600;letter-spacing:6px;color:var(--cel-lt);text-transform:uppercase;display:flex;align-items:center;gap:14px;margin-bottom:22px;opacity:0;animation:fu .7s .2s forwards;text-shadow:0 1px 6px rgba(0,0,0,.4)}
+.hey{font-size:10px;font-weight:700;letter-spacing:5px;color:#fff;text-transform:uppercase;display:flex;align-items:center;gap:14px;margin-bottom:22px;opacity:0;animation:fu .7s .2s forwards;text-shadow:0 1px 8px rgba(0,0,0,.5)}
 .hey::before{content:'';width:34px;height:1px;background:var(--cel-lt);opacity:.7}
 @keyframes fu{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:translateY(0)}}
 .hh{font-family:'Cormorant Garamond',serif;font-size:clamp(46px,9vw,104px);font-weight:300;line-height:.88;color:#fff;margin-bottom:22px;opacity:0;animation:fu .9s .4s forwards}
@@ -80,8 +78,8 @@ nav.sc .ham span{background:var(--t)}
 /* ══ SHARED ══ */
 .sec{padding:110px 48px}
 .mx{max-width:1160px;margin:0 auto}
-.ey{font-size:9px;font-weight:700;letter-spacing:5px;color:var(--cel-sc);text-transform:uppercase;display:flex;align-items:center;gap:12px;margin-bottom:16px}
-.ey::before{content:'';width:28px;height:1px;background:var(--cel-sc)}
+.ey{font-size:10px;font-weight:700;letter-spacing:4px;color:#2a6f96;text-transform:uppercase;display:flex;align-items:center;gap:12px;margin-bottom:16px}
+.ey::before{content:'';width:28px;height:1px;background:#2a6f96}
 .ey.lt{color:var(--cel-lt)}.ey.lt::before{background:var(--cel-lt)}
 .st{font-family:'Cormorant Garamond',serif;font-size:clamp(32px,5vw,58px);font-weight:300;line-height:1.05;margin-bottom:16px}
 .st em{font-style:italic;color:var(--cel)}
@@ -205,7 +203,7 @@ nav.sc .ham span{background:var(--t)}
 }
 .pr-card:hover .pr-card-img-inner{transform:scale(1.04)}
 .pr-card-body{padding:52px 60px;display:flex;flex-direction:column;justify-content:center}
-.pr-card-tag{font-size:9px;font-weight:700;letter-spacing:4px;color:var(--cel-sc);text-transform:uppercase;margin-bottom:14px}
+.pr-card-tag{font-size:10px;font-weight:700;letter-spacing:3px;color:#1f5a78;text-transform:uppercase;margin-bottom:14px}
 .pr-card-name{font-family:'Cormorant Garamond',serif;font-size:clamp(30px,3.5vw,46px);font-weight:400;color:var(--t);margin-bottom:10px;line-height:1.05}
 .pr-card-sci{font-size:12px;font-style:italic;font-weight:400;color:var(--tl);margin-bottom:22px;letter-spacing:.3px}
 .pr-card-desc{font-size:14px;font-weight:400;line-height:1.9;color:var(--t);margin-bottom:32px}
