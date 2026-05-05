@@ -21,15 +21,13 @@ body{font-family:'Montserrat',sans-serif;background:var(--crema);color:var(--t);
 nav{position:fixed;top:0;left:0;right:0;z-index:200;padding:0 48px;height:72px;display:flex;align-items:center;justify-content:space-between;transition:background .5s,box-shadow .5s}
 nav.sc{background:rgba(255,255,255,.98);box-shadow:0 1px 0 rgba(106,172,206,.2);backdrop-filter:blur(16px)}
 .nav-logo-wrap{display:flex;align-items:center}
-.logo-txt{display:flex;flex-direction:column;gap:2px;line-height:1}
-.ltop{font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:400;letter-spacing:2px;transition:color .3s}
-.lbot{font-size:7px;font-weight:700;letter-spacing:6px;text-transform:uppercase;transition:color .3s}
-nav:not(.sc) .logo-txt .ltop{color:#fff;text-shadow:0 1px 10px rgba(0,0,0,.5)}
-nav:not(.sc) .logo-txt .lbot{color:rgba(255,255,255,.6)}
-nav.sc .logo-txt .ltop{color:var(--blu)}
-nav.sc .logo-txt .lbot{color:#2a6f96}
-.mob-lt .ltop{color:var(--blu)}.mob-lt .lbot{color:#2a6f96}
-.foot-lt .ltop{color:#fff}.foot-lt .lbot{color:rgba(255,255,255,.5)}
+.nl{height:48px;width:auto;display:block;transition:filter .3s}
+/* Hero: icona teal su sfondo scuro — filtro bianco per massima leggibilità */
+nav:not(.sc) .nl{filter:brightness(0) invert(1) drop-shadow(0 1px 8px rgba(0,0,0,.4))}
+/* Dopo scroll: icona a colori naturali su sfondo bianco */
+nav.sc .nl{filter:none}
+.mob-logo{height:42px;width:auto;display:block}
+.flogo{height:36px;width:auto;display:block;filter:brightness(0) invert(1);opacity:.9}
 .nlinks{display:flex;gap:34px;align-items:center}
 .nlinks a{font-size:10px;font-weight:600;letter-spacing:3px;text-decoration:none;text-transform:uppercase;transition:color .2s;white-space:nowrap}
 nav:not(.sc) .nlinks a{color:rgba(255,255,255,.6)}
@@ -73,10 +71,9 @@ nav.sc .ham span{background:var(--t)}
 .bp:hover{background:var(--cel-sc);transform:translateY(-1px)}
 .bg{padding:13px 30px;border:1px solid rgba(255,255,255,.28);color:rgba(255,255,255,.65);font-size:9px;font-weight:600;letter-spacing:3px;text-transform:uppercase;text-decoration:none;transition:border-color .2s,color .2s}
 .bg:hover{border-color:var(--cel-lt);color:var(--cel-lt)}
-.hst{display:flex;flex-direction:column;gap:6px;align-items:flex-end;text-align:right;opacity:0;animation:fu .9s 1s forwards}
-.hst>div{padding:12px 18px;border-left:2px solid rgba(106,172,206,.4);background:rgba(0,0,0,.28);backdrop-filter:blur(4px)}
-.sn{font-family:'Cormorant Garamond',serif;font-size:38px;font-weight:300;color:#fff;line-height:1}
-.sl{font-size:8px;font-weight:600;letter-spacing:3px;color:rgba(255,255,255,.7);text-transform:uppercase;margin-top:3px}
+.hst{display:flex;flex-direction:column;gap:26px;align-items:flex-end;text-align:right;opacity:0;animation:fu .9s 1s forwards}
+.sn{font-family:'Cormorant Garamond',serif;font-size:40px;font-weight:300;color:var(--cel-lt);line-height:1}
+.sl{font-size:8px;font-weight:600;letter-spacing:3px;color:rgba(255,255,255,.28);text-transform:uppercase}
 
 /* ══ SHARED ══ */
 .sec{padding:110px 48px}
@@ -127,7 +124,7 @@ nav.sc .ham span{background:var(--t)}
 
 /* ══ GALLERY ══ */
 .gallery-sec{background:var(--blu-sc);padding:100px 48px;position:relative;overflow:hidden}
-.gallery-sec::after{content:'Famiglia';position:absolute;font-family:'Cormorant Garamond',serif;font-size:clamp(80px,14vw,200px);font-weight:300;color:rgba(255,255,255,.025);right:-20px;bottom:-20px;line-height:1;pointer-events:none}
+.gallery-sec::after{content:'Famiglia';position:absolute;font-family:'Cormorant Garamond',serif;font-size:clamp(80px,14vw,200px);font-weight:300;color:rgba(255,255,255,.025);left:0;right:auto;bottom:-20px;line-height:1;pointer-events:none}
 .gallery-inner{max-width:1160px;margin:0 auto;position:relative;z-index:1}
 .gallery-quote{font-family:'Cormorant Garamond',serif;font-size:clamp(22px,4vw,40px);font-weight:300;font-style:italic;color:#fff;max-width:680px;margin-bottom:56px;line-height:1.5}
 .gallery-quote::before{content:'"';font-size:1.4em;color:var(--cel);line-height:0;vertical-align:-.2em;margin-right:4px}
@@ -299,7 +296,7 @@ footer{background:var(--blu-sc);padding:52px 48px;border-top:1px solid rgba(106,
 <!-- NAV -->
 <nav id="nav">
   <div class="nav-logo-wrap">
-    <div class="logo-txt"><span class="ltop">Capuano</span><span class="lbot">Manfredonia</span></div>
+    <img class="nl" src="Logo_transparent.png" alt="Capuano Manfredonia">
   </div>
   <div class="nlinks">
     <a href="#storia">Storia</a>
@@ -313,7 +310,7 @@ footer{background:var(--blu-sc);padding:52px 48px;border-top:1px solid rgba(106,
 
 <div class="mob" id="mob">
   <span class="mob-x" onclick="cM()">✕</span>
-  <div class="logo-txt mob-lt"><span class="ltop">Capuano</span><span class="lbot">Manfredonia</span></div>
+  <img class="mob-logo" src="Logo_transparent.png" alt="Capuano Manfredonia">
   <a href="#storia" onclick="cM()">Storia</a>
   <a href="#filiera" onclick="cM()">Filiera</a>
   <a href="#territorio" onclick="cM()">Territorio</a>
@@ -772,7 +769,7 @@ footer{background:var(--blu-sc);padding:52px 48px;border-top:1px solid rgba(106,
         <h3 class="st" style="color:var(--t)">Siamo a <em>Manfredonia</em></h3>
       </div>
       <div class="map-wrap">
-        <iframe src="https://maps.google.com/maps?q=Contrada+Pariti+di+Caniglia,+Manfredonia+FG+71043,+Italia&output=embed&hl=it&z=14" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <iframe src="https://maps.google.com/maps?q=C.da+Pariti+di+Caniglia,+Area+PIP+Industriale,+Manfredonia+FG+71043,+Italia&output=embed&hl=it&z=15" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
       </div>
       <div class="map-info">
         <div class="map-info-item">
@@ -796,7 +793,7 @@ footer{background:var(--blu-sc);padding:52px 48px;border-top:1px solid rgba(106,
 <footer>
   <div class="fi2">
     <div class="foot-logo-wrap">
-      <div class="logo-txt foot-lt"><span class="ltop">Capuano</span><span class="lbot">Manfredonia</span></div>
+      <img class="flogo" src="Logo_transparent.png" alt="Capuano Manfredonia">
     </div>
     <div class="fcp">© 2025 Capuano Srl · P.IVA 03027240716 · Tutti i diritti riservati</div>
     <div class="flk"><a href="#">Privacy</a><a href="#">Cookie</a><a href="#">Note legali</a></div>
