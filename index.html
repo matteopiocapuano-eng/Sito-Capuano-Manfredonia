@@ -231,6 +231,12 @@ nav.sc .ham span{background:var(--t)}
 
 /* ══ FOOTER ══ */
 footer{background:var(--blu-sc);padding:52px 48px;border-top:1px solid rgba(106,172,206,.08)}
+.fcp{text-align:center}
+.fcontact{display:flex;flex-wrap:wrap;justify-content:center;gap:8px 28px;margin-bottom:14px;font-size:12px;font-weight:300;color:rgba(255,255,255,.5)}
+.fcontact strong{font-weight:600;color:rgba(255,255,255,.7)}
+.fcontact a{color:var(--cel-lt);text-decoration:none}
+.fcontact a:hover{color:#fff}
+.fcopy{font-size:12px;font-weight:300;color:rgba(255,255,255,.35)}
 .fi2{max-width:1160px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:18px}
 .foot-logo-wrap{background:transparent;padding:0;display:flex;align-items:center;gap:14px}.flogo-brand{display:flex;flex-direction:column;line-height:1.15}.flogo-brand .nb-t{color:#fff;opacity:.9}.flogo-brand .nb-b{color:rgba(255,255,255,.5)}
 .flogo{height:52px;width:auto;filter:brightness(0) invert(1);opacity:.9}
@@ -557,9 +563,9 @@ footer{background:var(--blu-sc);padding:52px 48px;border-top:1px solid rgba(106,
     <h2 class="st wh r d1">Parliamo del<br>nostro <em>pescato</em></h2>
     <div class="co-g">
       <div class="r d1">
-        <div class="cg"><div class="cl">Sede operativa</div><div class="cv">C.da Pariti di Caniglia sc<br>Area P.I.P. "Industriale", Lotto 46<br>Manfredonia (FG) 71043</div></div>
-        <div class="cg"><div class="cl">Telefono</div><div class="cv">0884 662558<br><span style="font-size:14px;color:var(--g)">Cell. 344 4397212</span></div></div>
-        <div class="cg"><div class="cl">Email</div><div class="cv">info@capuanomanfredonia.it</div></div>
+        <div class="cg"><div class="cl">Sede operativa</div><div class="cv">C.da Pariti di Caniglia sc, Area P.I.P. "Industriale", Lotto 46 S.n.<br>Manfredonia (FG) - 71043</div></div>
+        <div class="cg"><div class="cl">Telefono</div><div class="cv">+39 088 4662558<br><span style="font-size:14px;color:var(--g)">+39 344 4397212</span></div></div>
+        <div class="cg"><div class="cl">Email</div><div class="cv">info@capuanomare.com</div></div>
         <div class="cg"><div class="cl">Orari</div><div class="cv" style="font-size:15px">Lun–Ven · 6:00–18:00<br>Sab · 6:00–14:00</div></div>
       </div>
       <div class="r d2">
@@ -583,15 +589,15 @@ footer{background:var(--blu-sc);padding:52px 48px;border-top:1px solid rgba(106,
       <div class="map-info">
         <div class="map-info-item">
           <svg class="map-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/><circle cx="12" cy="9" r="2.5"/></svg>
-          <div class="map-info-text"><strong>Sede operativa</strong>C.da Pariti di Caniglia sc · Area P.I.P. "Industriale", Lotto 46<br>Manfredonia (FG) 71043</div>
+          <div class="map-info-text"><strong>Sede operativa</strong>C.da Pariti di Caniglia sc, Area P.I.P. "Industriale", Lotto 46 S.n.<br>Manfredonia (FG) - 71043</div>
         </div>
         <div class="map-info-item">
           <svg class="map-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
-          <div class="map-info-text"><strong>Telefono</strong>0884 662558<br>Cell. 344 4397212</div>
+          <div class="map-info-text"><strong>Telefono</strong>+39 088 4662558<br>+39 344 4397212</div>
         </div>
         <div class="map-info-item">
           <svg class="map-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="5" width="18" height="14" rx="1"/><path d="M3 7l9 6 9-6"/></svg>
-          <div class="map-info-text"><strong>Email</strong>info@capuanomanfredonia.it</div>
+          <div class="map-info-text"><strong>Email</strong>info@capuanomare.com</div>
         </div>
       </div>
     </div>
@@ -604,7 +610,15 @@ footer{background:var(--blu-sc);padding:52px 48px;border-top:1px solid rgba(106,
     <div class="foot-logo-wrap">
       <img class="flogo" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAYAAAA+s9J6AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAABEKSURBVHhe7Z1LqyxXFYDzg5yKI2c6ceDIjIJOFOeKg4hBoviIg6AoIk5MokYwGBVN0OAFxasiwUjim4REopGoMUS8eZHrsd3fXntVVdfpvqfP6Ud1nft93H27u2rXfqy91tqP2lXnFhERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERkZb/rIvYsrf35+ceWPz0Uo3992132LdnpnfOvxvyzl8f77f7TzPO7+4S/7PErgdzslcry89WMPLMa84wsP7Vx5X3z5Py316/X/ux/52c7zuPrscyXlk8XifzWLxdUnn9UI5fgJIyyK2ynvyd6M8A2S/2/9f49GWIy82vmJRijzQCMUmZhpjPBkL/O1zghbPTRCmQXTGOH1/Rkh6WuEMicunRHaE8rcWGWEb/7Mg3s3wk987+p+jNCeUOZGZ4RVcRtFkf/+6is7DdUAyaPlc62EVfG2CWHgPRqhzIKVRlhpvWMXkvHxs0JPmMjgWJfn+JphSFadG4dlNEKZBf1wdBkMZlchja37XSl5tqFpHt82jNEIZRaEEU5FvaG3NzRCmQXsHb3n6hOXMnzo/p9ohCIiIiIiIiIiIiIiIiIiIiIiIvuB7We3ffabdavWpx56ooZN3uPCdcT74sO/3lnggV3Cl37wi42fTaTcXLMqvYsE8t7ktYrI6ZNXfl+fb6QM7/vKI4u33bn7Vz7KhvBuzGf++a/Fdx77Q20MFLSdOip4LyhKwwblp19qD8tWeBqCTdEtlH/tkrWgcMHo2q1DPJmBY2hZ3ZDf/P2lEvv1ElaldZFwsnj0D389M2/aO55uzLx7XnztZMGDwuxD3bQeU0DZKCP6QE14r2s7NT+oRDRGgHLTCB/97pXJK4WgcRIYXYCSh6LXR4V4LGikhzRIu3wtPEVRjZg0bhRIf10Yxx0o9Kavynj8n6/EdeO0VuWXYRx3GEr+Dz/zzJl5P/2P16L+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XGJLcqcctCekXk3R2qmN2WT4yBMy/egiycYeh9YGlKfWI+SOnDd5YuSiMPwPZ9G3d1eOWqxsf85d28j5HC14X7xI3/MQogFQ+q7iVSliCEcD4HU/+OBDF95ChYdDKZdeYdHyqXlCzRNBhzLwwRMW9JQY7SH3nB7OCEOxUgbt1N6hdyN/piGMfro2GZRnuV3QkzjGEJE2Yd5+kTkk15A3T6rEw90Qutjl23Qj8+U7jgSHgsFemj8gQy9HI7BQEQJH+WmO8WM2YaQJ57iGxqABVwWGvXi2uDc3hHSa4Ze0O4HXxo/cc9GoFXMSLrsRrgKjyjl5pesJo61qqMdov4jDL0ZN6AMOdpUuENAV4hA361rJdDv94rPlWQJloS0OsX1wcvAsNEDck0IIJVTh9MIO4SGc8Fq9wHqh9QHyeMZNMm2I9GkkJuLHshPkZjTCISzMYDxRrjS6GCLWY2k8ta7Z5tGW/e8MENfH79CHTKum110bC0YMN5FPK87NBUOF5QYoIOgm7BRanEuBljCUOaET+DCkMcbgB8/IkOQYhxY3uxEmTAEYLVH/LOOwTTkWx7N9CYU+yuBLGFrE53vqSBg3eZDXIacdRw+rifROGGQ/ZIUU4LqAYGkMvvdgevR4LPgc+99v0AhPw3oAdUIfTk8zWtvXurfvXUgDJPSQBmkxx5vrxoGDw1CRsTk9JRNzFmsQIkMHPodzAuZ1nEfAxJ+bkDXCs6HHog44ato69aHThRbQBQI6Q1x0yA3ociYaocjEaIQiE6MRikyMRigyMRqhyMRohCIToxGKTIxGKDIxGqHIxGiEIhOjEYpMjEYoMjFhhGEgPAWwDyNkIzN51Njt+cp2SkR4ro0HnHmEi7DJO00u0hNm+gReOdJOichFOK8RiriO0QhFJkYjFJkYjVBkYjRCkYnRCEUmRiMUmRiNUGRiMMKA92xqhCIHhz8jkO/YJPDHd9opERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERmQu33PJ/xiajXkeailMAAAAASUVORK5CYII=" alt="Capuano Manfredonia"><span class="flogo-brand"><span class="nb-t">Capuano</span><span class="nb-b">Manfredonia</span></span>
     </div>
-    <div class="fcp">© 2025 Capuano Srl · P.IVA 03027240716 · Tutti i diritti riservati</div>
+    <div class="fcp">
+      <div class="fcontact">
+        <span><strong>Tel:</strong> +39 088 4662558</span>
+        <span><strong>Cell:</strong> +39 344 4397212</span>
+        <span><a href="mailto:info@capuanomare.com">info@capuanomare.com</a></span>
+        <span>C.da Pariti di Caniglia sc, Area P.I.P. "Industriale", Lotto 46 S.n. · Manfredonia (FG) 71043</span>
+      </div>
+      <div class="fcopy">© 2026 Capuano Srl · P.IVA 03027240716 · Tutti i diritti riservati</div>
+    </div>
     <div class="flk"><a href="#">Privacy</a><a href="#">Cookie</a><a href="#">Note legali</a></div>
   </div>
 </footer>
